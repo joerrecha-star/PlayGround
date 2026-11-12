@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101c2a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%26%239760%3B%3C/text%3E%3C/svg%3E" />
+  <title>Grand Line: Dawn of the Pirate King</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Grand Line home"><span class="brand-mark">☠</span><span>GRAND<span class="brand-light">LINE</span></span></a>
+      <div class="chapter"><span class="chapter-dot"></span> EAST BLUE <span class="slash">/</span> SHELLS TOWN</div>
+      <button class="sound-button" id="soundBtn" aria-label="Toggle sound">♫ <span>SOUND ON</span></button>
+    </header>
+    <section class="game-frame" aria-label="Grand Line pirate adventure game">
+      <canvas id="game" width="960" height="540" aria-label="Pirate platform adventure"></canvas>
+      <div class="hud" id="hud">
+        <div class="player-card"><div class="avatar">☠</div><div><div class="eyebrow">CAPTAIN</div><div class="player-name">MONKEY D. LUFFY</div></div></div>
+        <div class="health-wrap"><div class="health-label"><span>VITALITY</span><span id="healthText">100 / 100</span></div><div class="health-track"><div class="health-fill" id="healthFill"></div></div></div>
+        <div class="bounty"><span class="bounty-icon">✦</span><div><small>BOUNTY</small><strong id="scoreText">000000</strong></div><span class="berry">฿</span></div>
+      </div>
+      <div class="objective" id="objective"><span class="objective-icon">⚑</span><span><b>MISSION</b> Clear the Marine outpost <i id="missionCount">0 / 8</i></span></div>
+      <div class="toast" id="toast"></div>
+      <div class="screen" id="startScreen">
+        <div class="screen-content">
+          <div class="kicker"><span></span> A NEW ADVENTURE BEGINS <span></span></div>
+          <h1>THE <em>GRAND</em><br>LINE</h1>
+          <p class="subtitle">DAWN OF THE PIRATE KING</p>
+          <p class="intro">The Marines have taken over Shells Town.<br>Knock them out, claim the treasure, and set sail.</p>
+          <button class="primary-button" id="startBtn">SET SAIL <span>→</span></button>
+          <div class="start-controls"><span>← → MOVE</span><span>SPACE JUMP</span><span>J PUNCH</span></div>
+        </div>
+        <div class="screen-stamp">EAST<br>BLUE</div>
+      </div>
+      <div class="screen hidden" id="endScreen">
+        <div class="screen-content end-content"><div class="kicker"><span></span> ADVENTURE COMPLETE <span></span></div><h2>THE SEA<br><em>IS YOURS.</em></h2><p class="intro">The outpost is yours. Your legend is just getting started.</p><div class="reward-line"><span>TREASURE CLAIMED</span><strong id="finalScore">฿ 000000</strong></div><button class="primary-button" id="replayBtn">PLAY AGAIN <span>↻</span></button></div>
+      </div>
+      <div class="mobile-controls" aria-label="Touch controls">
+        <div class="move-pad"><button data-key="left" aria-label="Move left">‹</button><button data-key="right" aria-label="Move right">›</button></div>
+        <div class="action-pad"><button class="jump" data-key="jump" aria-label="Jump">↑</button><button class="attack" data-key="attack" aria-label="Attack">✦</button></div>
+      </div>
+    </section>
+    <footer class="bottom-bar"><div class="tip"><span class="tip-icon">✦</span><span id="tipText">TIP: Hit enemies when they get close to build your bounty.</span></div><div class="controls-legend"><kbd>A</kbd><kbd>D</kbd> MOVE <i></i><kbd>SPACE</kbd> JUMP <i></i><kbd>J</kbd> PUNCH</div></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
